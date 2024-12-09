@@ -1,2 +1,9 @@
 action_endpoint:
-  url: "http://localhost:5055/webhook"
+  url: ${ACTION_ENDPOINT_URL}
+
+tracker_store:
+  type: ${TRACKER_STORE_TYPE}
+  url: ${TRACKER_STORE_URL}
+  db: ${TRACKER_STORE_DB}
+  username: ${TRACKER_STORE_USERNAME}
+  password: ${TRACKER_STORE_PASSWORD}
