@@ -39,5 +39,5 @@ jobs:
         with:
           push: true
           tags: |
-            ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:latest
-            ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:${{ github.sha }}
+            ghcr.io/${{ env.REPO_OWNER }}/Rasa-Server:latest
+            ghcr.io/${{ env.REPO_OWNER }}/Rasa-Server:${{ github.sha }}
