@@ -1,0 +1,25 @@
+version: "3.1"
+intents:
+  - greet
+  - ask_weather
+  - goodbye
+
+entities:
+  - location
+
+slots:
+  location:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: location
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I assist you today?"
+
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+
+actions:
+  - action_get_weather

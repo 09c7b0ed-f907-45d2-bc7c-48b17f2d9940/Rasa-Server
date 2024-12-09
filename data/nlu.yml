@@ -1,0 +1,25 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - hey
+    - good morning
+    - good evening
+
+- intent: ask_weather
+  examples: |
+    - What's the weather like?
+    - How's the weather?
+    - Tell me the weather in [Copenhagen](location)
+    - What's the weather in [New York](location)?
+    - Weather for [London](location), please
+    - Is it raining in [Berlin](location)?
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you later
+    - have a great day
