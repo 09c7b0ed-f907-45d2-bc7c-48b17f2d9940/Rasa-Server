@@ -1,17 +1,21 @@
-FROM rasa/rasa:latest
+FROM python:3.10.6-slim
 
 COPY . /app
 WORKDIR /app
 
-USER root
-RUN pip install --no-cache-dir --upgrade pip==24.3.1
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    gcc \
+    libpq-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN pip install --no-cache-dir --upgrade pip
 
 COPY requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY start.sh /app/start.sh
 RUN chmod +x /app/start.sh
-USER 1001
 
 EXPOSE 5005
 
