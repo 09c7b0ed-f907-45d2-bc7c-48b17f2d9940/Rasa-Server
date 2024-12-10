@@ -11,8 +11,5 @@ else
     echo "Model is up to date. No training or fine-tuning needed."
 fi
 
-# Use the RASA_DEBUG_LEVEL environment variable if provided
-DEBUG_FLAG=${RASA_DEBUG_LEVEL:-""}
-
-# Start the Rasa server
-rasa run --enable-api --cors "*" $DEBUG_FLAG
+# Start the Rasa server & Pass arguments (e.g., --debug) to the Rasa server
+rasa run --enable-api --cors "*" "$@"
