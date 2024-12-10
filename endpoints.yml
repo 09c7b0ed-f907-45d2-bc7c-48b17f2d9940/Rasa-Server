@@ -1,9 +1,9 @@
 action_endpoint:
-  url: ${CVA_ACTION_ENDPOINT}
+  url: ${ACTION_ENDPOINT_URL}
 
 tracker_store:
-  type: ${CVA_TRACKER_STORE_TYPE}
-  url: ${CVA_TRACKER_STORE_URL}
-  db: ${CVA_TRACKER_STORE_DB}
-  username: ${CVA_TRACKER_STORE_USERNAME}
-  password: ${CVA_TRACKER_STORE_PASSWORD}
+  type: ${TRACKER_STORE_TYPE}
+  url: ${TRACKER_STORE_URL}
+  db: ${TRACKER_STORE_DB}
+  username: ${TRACKER_STORE_USERNAME}
+  password: ${TRACKER_STORE_PASSWORD}
