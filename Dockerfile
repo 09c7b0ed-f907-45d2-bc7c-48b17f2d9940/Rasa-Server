@@ -7,6 +7,12 @@ COPY . /app
 # Set the working directory
 WORKDIR /app
 
+# Copy requirements.txt
+COPY requirements.txt /app/requirements.txt
+
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
 # Train the Rasa model (optional, depending on workflow)
 RUN rasa train
 
