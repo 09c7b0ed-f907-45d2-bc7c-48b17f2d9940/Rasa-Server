@@ -11,5 +11,12 @@ else
     echo "Model is up to date. No training or fine-tuning needed."
 fi
 
+# Check for RASA_DEBUG flag
+if [ "$RASA_DEBUG" = "true" ]; then
+    DEBUG_FLAG="--debug"
+else
+    DEBUG_FLAG=""
+fi
+
 # Start the Rasa server
-rasa run --enable-api --cors "*"
+rasa run --enable-api --cors "*" $DEBUG_FLAG
