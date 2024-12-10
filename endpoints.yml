@@ -1,5 +1,5 @@
 action_endpoint:
-  url: ${ACTION_ENDPOINT_URL}
+  url: ${ACTION_ENDPOINT}
 
 tracker_store:
   type: ${TRACKER_STORE_TYPE}
